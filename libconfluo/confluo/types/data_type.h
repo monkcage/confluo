@@ -47,6 +47,8 @@ struct data_type {
    * @param _size
    */
   data_type(const std::string &name, size_t _size);
+ 
+  data_type(data_type const&) = default;
 
   /**
    * Assigns contents of another data type to this data type
