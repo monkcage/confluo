@@ -155,7 +155,7 @@ metadata_reader::metadata_reader(const std::string &path)
       in_(filename_) {
 }
 bool metadata_reader::has_next() {
-  return in_.tellg() != utils::file_utils::file_size(filename_);
+  return size_t(in_.tellg()) != utils::file_utils::file_size(filename_);
 }
 metadata_type metadata_reader::next_type() {
   return io_utils::read<metadata_type>(in_);
