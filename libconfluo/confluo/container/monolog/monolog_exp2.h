@@ -49,6 +49,8 @@ class monolog_iterator : public std::iterator<std::forward_iterator_tag,
         pos_(pos) {
   }
 
+  monolog_iterator(monolog_iterator const&) = default;
+                                                
   /**
    * Dereferences the pointer at a given position
    *
