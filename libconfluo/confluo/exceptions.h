@@ -20,6 +20,7 @@ class name : public std::exception {\
   name()\
       : msg_("") {\
   }\
+  name(name const&) = default; \
   const char* what() const noexcept {\
     return msg_.c_str();\
   }\
